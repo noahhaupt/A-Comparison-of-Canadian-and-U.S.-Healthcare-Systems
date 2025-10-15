@@ -7,6 +7,7 @@ data = pd.read_csv("data/healthcare_data.csv")
 
 # Filtering the data:
     
+
 # This converts to data to a list of lists
 rows = data.values.tolist()
 
@@ -19,7 +20,7 @@ for row in rows:
     if country == "Canada" or country == "USA":
        # Skips hospital beds since it is the 4th column (4th item in first row) in the data
         new_row = [row[0], row[1], row[2], row[4], row[5], row[6]]
-        filtered_rows += new_row
+        filtered_rows.append(new_row)
 
 print("Filtered Data (Canada & USA, no Hospital Beds):", filtered_rows)
 
