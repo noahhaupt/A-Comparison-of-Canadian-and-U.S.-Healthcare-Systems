@@ -3,7 +3,7 @@
 
 # Importing the data
 import pandas as pd
-df = pd.read_csv("data/healthcare_data.csv")
+df = pd.read_csv("data/healthcare_access_countries.csv")
 specific_countries = ["Canada","USA"]
 
 # We don't want data every 5 years, instead, we want a scatter of all the data, so we remove the specific_years

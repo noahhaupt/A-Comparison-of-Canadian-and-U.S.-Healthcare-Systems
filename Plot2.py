@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-
 import pandas as pd
-df = pd.read_csv("data/healthcare_data.csv")
+df = pd.read_csv("data/healthcare_access_countries.csv")
 specific_countries = ["Canada","USA"]
 specific_years = [1990, 1995, 2000, 2005, 2010, 2015, 2020]
 
@@ -25,4 +24,4 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# Explanation: 
+# Explanation: The graph compares healthcare spending in Canada (blue) and the USA (orange) every 5 years from 1990 to 2020. Both countries show a very similar trend over the 30 years, with USA spending slightly more from 2000 to 2015, to 2020, where the GDP spending percent is almost the same. This helps us a lot with our research, showing that the two countries spend similar amounts, making it easier to understand their efficiency when we look at other graphs.

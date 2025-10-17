@@ -3,7 +3,7 @@
 
 # Filtered data (from previous python sheet):
 import pandas as pd
-df = pd.read_csv("data/healthcare_data.csv")
+df = pd.read_csv("data/healthcare_access_countries.csv")
 specific_countries = ["Canada","USA"]
 filtered_data = df[df["Country"].isin(specific_countries)].filter(items=["Year","Country","Life_Expectancy","Doctors_per_1000","Healthcare_Spending_GDP_percent","Infant_Mortality_per_1000"])
 

@@ -4,7 +4,7 @@
 # Importing the data. Once again, we have to take every 5 years
 
 import pandas as pd
-df = pd.read_csv("data/healthcare_data.csv")
+df = pd.read_csv("data/healthcare_access_countries.csv")
 specific_countries = ["Canada","USA"]
 specific_years = [1990, 1995, 2000, 2005, 2010, 2015, 2020]
 

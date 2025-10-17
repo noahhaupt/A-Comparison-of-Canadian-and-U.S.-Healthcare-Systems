@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("C:/Users/6304301/Downloads/New folder/healthcare_access_countries.csv")
+df = pd.read_csv("data/healthcare_access_countries.csv")
 
 import matplotlib.pyplot as plt
 

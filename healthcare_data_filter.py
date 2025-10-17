@@ -5,7 +5,7 @@ import pandas as pd
 
 # Import the data fom computer using pandas function
 
-df = pd.read_csv("data/healthcare_data.csv")
+df = pd.read_csv("data/healthcare_access_countries.csv")
 
 
 # Create a new variable containing only the needed countries for this lab (Canada and USA)
