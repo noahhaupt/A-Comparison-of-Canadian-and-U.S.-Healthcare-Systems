@@ -32,3 +32,5 @@ plt.ylabel("Life Expectancy (years)")
 plt.legend()
 plt.grid(True)
 plt.show()
+
+# Explanation: This plot describes life expectancy in Canada vs USA every 5 years from 1990 to 2020. Each point represents the average life expectancy in that country in that year. Throughout most of the time period, Canada maintains a slightly higher average life expectancy over the US. However, in recent years (2010-2020), the United States shows a very noticable improvement and advantage over Canada.
