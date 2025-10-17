@@ -2,27 +2,26 @@
 
 import pandas as pd
 
-data = pd.read_csv("data/healthcare_data.csv")
+
+# Import the data fom computer using pandas function
+
+df = pd.read_csv("data/healthcare_data.csv")
 
 
-# Filtering the data:
-    
+# Create a new variable containing only the needed countries for this lab (Canada and USA)
 
-# This converts to data to a list of lists
-rows = data.values.tolist()
-
-filtered_rows = []
-
-for row in rows:
-    country = row[1]     # The second column is country
-    
-# Keeps only Canada and USA
-    if country == "Canada" or country == "USA":
-       # Skips hospital beds since it is the 4th column (4th item in first row) in the data
-        new_row = [row[0], row[1], row[2], row[4], row[5], row[6]]
-        filtered_rows.append(new_row)
-
-print("Filtered Data (Canada & USA, no Hospital Beds):", filtered_rows)
+specific_countries = ["Canada","USA"]
 
 
-#The data was filtered to only contain values from Canada and USA, and not Nigeria, India, and Germany, since we are only concerned with comparing those two countries. The data was also filtered to remove the  hospital beds per 100 column, since we did not ask for this in our research proposal questions. 
+# Filtered data should now only contain countries in the specific_countries variable.
+# Filtered data will include 6 of the 7 columns of the data (since we are not looking for information on hospital beds per 1000)
+
+filtered_data = df[df["Country"].isin(specific_countries)].filter(items=["Year","Country","Life_Expectancy","Doctors_per_1000","Healthcare_Spending_GDP_percent","Infant_Mortality_per_1000"])
+
+
+print(filtered_data)
+
+# The filtered data prints 62 rows (Canada and USA only) and the 6 required columns
+
+
+# Summary: The data was filtered to only contain values from Canada and USA, and not Nigeria, India, and Germany, since we are only concerned with comparing those two countries. The data was also filtered to remove the  hospital beds per 100 column, since we did not ask for this in our research proposal questions. 
