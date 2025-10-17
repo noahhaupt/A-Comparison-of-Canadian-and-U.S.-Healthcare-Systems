@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# Importing the data
 import pandas as pd
 df = pd.read_csv("data/healthcare_data.csv")
 specific_countries = ["Canada","USA"]
@@ -34,3 +35,5 @@ plt.grid(True)
 
 plt.suptitle("Healthcare Spending vs Life Expectancy (Canada vs USA, 1990–2020)")
 plt.show()
+
+# Explanation: This plot compared spending and life expectancy for Canada and the USA between the years 1990 and 2020. This graph was created too see if there is a visual correlation between healthcare spending and life expectancy. In the left subplot (Canada), we can see that as healtcare spending increases, so does life expectancy, since there are many values in the top right hand corner of the graph, and only 1 outlier in the top left. In the right subplot (USA), however, we can see that as healthcare spending increases, life expectancy doesn't necessarily increase. In fact, there are no values in the top right hand corner of the USA graph. 
